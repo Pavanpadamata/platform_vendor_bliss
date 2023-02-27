@@ -34,6 +34,8 @@ SOONG_CONFIG_blissGlobalVars += \
     target_inputdispatcher_skip_event_key \
     target_ld_shim_libs \
     target_surfaceflinger_udfps_lib \
+    camera_needs_miui_camera_mode_support \
+    camera_needs_camera_needs_depth_sensor_override \
     uses_egl_display_array \
     gralloc_handle_has_reserved_size \
 
@@ -57,6 +59,8 @@ SOONG_CONFIG_blissQcomVars += \
 endif
 
 # Soong bool variables
+SOONG_CONFIG_blissGlobalVars_camera_needs_miui_camera_mode_support := $(TARGET_USES_MIUI_CAMERA)
+SOONG_CONFIG_blissGlobalVars_camera_needs_camera_needs_depth_sensor_override := $(TARGET_USES_DEPTHSENSOR_OVERRIDE)
 SOONG_CONFIG_blissGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPLAY_ARRAY)
 SOONG_CONFIG_blissGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
 SOONG_CONFIG_blissNvidiaVars_uses_nvidia_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
